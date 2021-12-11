@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{%load staticfiles%}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>StudentInfo Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+          integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link rel="stylesheet" href="{%static "css/info.css" %}">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xm-12">
+          {%if students%}
+          <img src="https://sde.ok.gov/sites/ok.gov.sde/files/sisarrowprocess.jpg" alt="">
+            <div class="table-responsive">
+              <h1 align="center">Student Information</h1>
+              <p align="center">LIST OS STUDENTS</p>
+              <hr>
+              <table id="students" class="table table-hover">
+                <!-- theard or tr both we can take -->
+                <thead>
+                  <th>Student Name</th>
+                  <th>Student Marks</th>
+                </thead>
+                {%for student in students%}
+                    <tr>
+                      <td>{{student.name}}</td>
+                      <td>{{student.marks}}</td>
+                    </tr>
+                 {%endfor%}
+                {%else%}
+                    <p>No Records Are  Available</p>
+              {%endif%}
+
+              </table>
+            </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+</html>

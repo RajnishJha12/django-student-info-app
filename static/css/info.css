@@ -1,0 +1,33 @@
+/* #students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+#students {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#students td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#students tr:nth-child(even){background-color: #f2f2f2;}
+
+#students tr:hover {background-color: #ddd;} */
+.table th{
+  background-color: red;
+  color:yellow;
+}
+
+body{
+  background-image: url(http://www.allwhitebackground.com/images/5/Creative-Background-HD-Photos.jpg)
+  background-position: top;
+}
+.table-responsive p{
+  color: red;
+}
